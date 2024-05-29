@@ -12,6 +12,12 @@ def calculate_profit():
     The output should match the format of the following examples: "Profit: $690.00" for sales of $3,000, or "Profit: $2,300.00" for sales of $10,000, etc.
     """
 
+    the_projected_amount_of_total_sales = input("What is the projected amount of total sales? ")
+    profits = int(the_projected_amount_of_total_sales) * 23 / 100
+    message = f'''"Profits: ${profits}" for sales of ${the_projected_amount_of_total_sales}''' 
+    print(message)
+
+
 
 def calculate_quotient_and_remainder():
     """
@@ -22,6 +28,13 @@ def calculate_quotient_and_remainder():
       Enter number #2: 2
       2 goes into 5 a total of 2 times with a remainder of 1
     """
+    number_1 = input("Enter number #1: ")
+    number_2 = input("Enter number #2: ")
+    quotient = int(number_1) / int(number_2)
+    remainder = int(number_1) % int(number_2)
+    message = f"{number_2} goes into {number_1} a total of {quotient} times with a remainder of {remainder}"
+    print(message)
+          
 
 
 def calculate_miles_per_gallon():
@@ -35,6 +48,10 @@ def calculate_miles_per_gallon():
       Gas used (gallons): 25
       Miles per gallon: 2.2
     """
+    miles_driven = input("Enter the miles driven: ")
+    gas_used = input("Enter the gas used in gallons: ")
+    miles_per_gallon = int(miles_driven) / int(gas_used) 
+    print("Miles per gallon: " + str(miles_per_gallon))
 
 
 def align_text():
@@ -53,3 +70,18 @@ def align_text():
       Price #2: $   10.00
       Price #3: $ 9532.60
     """
+    price1 = input("Enter price #1: ")
+    price2 = input("Enter price #2: ")
+    price3 = input("Enter price #3: ")
+
+    print("Here are your prices!")
+    new_price_1 = format(float(price1),'.2f')
+    new_price_2 = format(float(price2),'.2f')
+    new_price_3 = format(float(price3),'.2f')
+
+    message1 = format("Price #1: $" + format(str(new_price_1),'>10s'))
+    message2 = format("Price #2: $" + format(str(new_price_2),'>10s'))
+    message3 = format("Price #3: $" + format(str(new_price_3),'>10s'))
+    print(message1)
+    print(message2)
+    print(message3)
